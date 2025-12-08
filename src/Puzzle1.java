@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class Puzzle1 {
     /**
      * Safe puzzle, everytime the dial is on 0, count one up; the total number is the password to the door.
+     * This is still coming up with the correct answer, even though I know the implementation is kind of bad. The negative side especially
+     * and the fact that we don't actually do the modulo operation, but that should not matter anyways.
      */
 
     public static void puzzle1() {

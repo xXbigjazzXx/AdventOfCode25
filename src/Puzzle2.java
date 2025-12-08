@@ -26,26 +26,48 @@ public class Puzzle2 {
         String[] words = actualInput.split("\n");
         int length = words.length;
         int rotationDirection = 0;
+        int lastPosition = 50;
 
         for (int i = 0; i < length; i++) {
             rotationDirection = words[i].contains("L") ? -1 : 1;
             String word = words[i].substring(1);
             Integer rotation = Integer.valueOf(word, 10);
+            System.out.println("Position: " + position);
+            System.out.println("LR: " + words[i]);
             position = position + (rotation * rotationDirection);
+
+
+            if(position == 0){
+                combinationCounter++;
+
+            }
 
             while(position < 0){
                 position += 100;
-                combinationCounter++;
+                if(lastPosition != 0){
+                    combinationCounter++;
+                }
+                //Edgecase fix for rotations over L100 when on position 0:
+                lastPosition = position;
+
+
             }
 
             while(position >= 100) {
                 position -= 100;
                 combinationCounter++;
+
             }
+            lastPosition = position;
+
+            System.out.println("position after: " + position);
+            System.out.println("counter: " + combinationCounter);
+            System.out.println("---------");
+
 
         }
 
-        //System.out.println(actualInput);
+        // System.out.println(actualInput);
         System.out.println(combinationCounter);
     }
 }
