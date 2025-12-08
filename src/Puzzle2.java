@@ -25,8 +25,8 @@ public class Puzzle2 {
 
         String[] words = actualInput.split("\n");
         int length = words.length;
-        int rotationDirection = 0;
-        int lastPosition = 50;
+        int rotationDirection;
+        int lastPosition = position;
 
         for (int i = 0; i < length; i++) {
             rotationDirection = words[i].contains("L") ? -1 : 1;
