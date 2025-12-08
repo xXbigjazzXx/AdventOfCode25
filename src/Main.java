@@ -10,8 +10,8 @@ public class Main {
     public static void main(String[] args) {
         //System.out.println("Puzzle 1 Part 1 answer:\n");
         //Puzzle1.puzzle1();
-        //System.out.println("Part 2 answer:\n");
-        //Puzzle2.puzzle2();
+        System.out.println("Part 2 answer:\n");
+        Puzzle2.puzzle2();
         System.out.println("Puzzle 2 Part 1 answer: \n");
         Puzzle3.puzzle3();
 

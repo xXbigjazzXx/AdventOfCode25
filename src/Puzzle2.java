@@ -32,6 +32,15 @@ public class Puzzle2 {
             rotationDirection = words[i].contains("L") ? -1 : 1;
             String word = words[i].substring(1);
             Integer rotation = Integer.valueOf(word, 10);
+            while(rotation > 100) {
+                rotation -= 100;
+                combinationCounter++;
+            }
+            while(rotation < -100){
+                rotation += 100;
+                combinationCounter++;
+            }
+
             System.out.println("Position: " + position);
             System.out.println("LR: " + words[i]);
             position = position + (rotation * rotationDirection);
