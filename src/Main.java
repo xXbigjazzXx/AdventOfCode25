@@ -14,8 +14,10 @@ public class Main {
         //Puzzle2.puzzle2();
         //System.out.println("Puzzle 2 Part 1 answer: \n");
         //Puzzle3.puzzle3();
-        System.out.println("Puzzle 3 Part 1 answer: ");
-        Puzzle5.puzzle5();
+        //System.out.println("Puzzle 3 Part 1 answer: ");
+        //Puzzle5.puzzle5();
+        System.out.println("Puzzle 3 Part 2 answer: \n");
+        Puzzle6.puzzle6();
 
     }
 }
